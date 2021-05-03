@@ -8,8 +8,8 @@ Query [Cowin API](https://apisetu.gov.in/public/api/cowin#/) using curl+jq and n
 
 * Works only on Mac OSX
 * curl
-* (jq)[https://stedolan.github.io/jq/download/]
-* (terminal-notifier)[https://github.com/julienXX/terminal-notifier]
+* [jq](https://stedolan.github.io/jq/download/)
+* [terminal-notifier](https://github.com/julienXX/terminal-notifier)
 * json_pp
 
 ## Run as cron
