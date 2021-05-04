@@ -1,4 +1,4 @@
-# cowin-notifier
+# vaxnotifier
 
 Query [Cowin API](https://apisetu.gov.in/public/api/cowin#/) using curl+jq and notify on Mac OSX status bar if vaccine slots available
 
@@ -16,13 +16,13 @@ Query [Cowin API](https://apisetu.gov.in/public/api/cowin#/) using curl+jq and n
 
 ```
 $ crontab -e
-* * * * * /path/to/cron.sh >> /tmp/cowin.log 2>&1
+* * * * * /path/to/cron.sh >> /tmp/vax.log 2>&1
 ```
 
 ## Run using watch
 
 ```
-$ watch -n60 '/path/to/cron.sh >> /tmp/cowin.log'
+$ watch -n60 '/path/to/cron.sh >> /tmp/vax.log'
 ```
 
 ## Options
