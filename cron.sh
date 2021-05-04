@@ -14,7 +14,7 @@ district_id=${2:-294}
 echo "[$(date +"%r")] Searching on $date in district $district_id for ages 18+"
 
 curl -X GET "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=$district_id&date=$date" -H "accept: application/json" -H "Accept-Language: hi_IN" | json_pp > /tmp/out.json
-jq -r '.centers[] | select(any(.sessions[]; .min_age_limit == 18 and .available_capacity > 0)) | [.name, .sessions[].session_id, .sessions[].available_capacity, .sessions[].min_age_limit, .sessions[].date] | @csv' /tmp/out.json > /tmp/found.csv
+jq -r '.centers[] | select(any(.sessions[]; .min_age_limit == 18 and .available_capacity > 0)) | [.name, .pincode, .sessions[].session_id, .sessions[].available_capacity, .sessions[].min_age_limit, .sessions[].date] | @csv' /tmp/out.json > /tmp/found.csv
 if [ -s /tmp/found.csv ]
 then
         echo "Slots found"
